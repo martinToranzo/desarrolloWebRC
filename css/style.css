@@ -1,0 +1,387 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../font/AvenirLTStd-Book.otf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "avenir";
+}
+
+/*--------------- ----------------------------------*/
+/*--------------- ---- HOME  ---------------------*/
+/*--------------- ----------------------------------*/
+
+/*----------- GRILLA ---------------------*/
+.grilla {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-areas:
+    "nav nav nav "
+    "seccionPortada seccionPortada  seccionPortada"
+    "titulo titulo titulo "
+    "seccionPrincipal  seccionPrincipal seccionPrincipal"
+    "footer footer footer ";
+  width: 100%;
+  height: 100%;
+}
+/* ----------------------- NAV ---------------------*/
+.logo {
+  max-width: 120px;
+}
+.nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: rgb(41, 115, 212);
+  background: linear-gradient(
+    264deg,
+    rgba(41, 115, 212, 1) 8%,
+    rgba(3, 1, 36, 0.8799894957983193) 30%,
+    rgba(14, 29, 50, 1) 80%
+  );
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+.menu li a:hover {
+  color: #2973d4;
+}
+/*------------- SECCION PORTADA -----------------*/
+.seccionPortada {
+  grid-area: seccionPortada;
+}
+.fotoPortada {
+  width: 100%;
+  height: 350px;
+}
+.fotoPortada img {
+  width: 100%;
+  height: 100%;
+}
+/* ----------- TITULO ------------------------------*/
+.titulo {
+  grid-area: titulo;
+}
+.titulo h1 {
+  margin: 1rem;
+  font-size: 2rem;
+}
+.titulo h2 {
+  margin: 1rem;
+}
+/* --------- SECCION PRINCIPAL ------------------*/
+.seccionPrincipal {
+  grid-area: seccionPrincipal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contenedorPresentacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    197deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(187, 187, 187, 0.8567598914565826) 100%
+  );
+}
+.contenedorPresentacionParrafos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 100%;
+  margin: 1rem;
+  padding: 3rem 1rem 3rem 1rem;
+}
+.contenedorInfoRC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin: 1rem;
+  padding: 1rem;
+}
+.contenedorInfoRC img {
+  width: 70%;
+  min-width: 250px;
+  border: 1px solid #bbb;
+  box-shadow: 0 5px 10px #0e1d32;
+}
+.contenedorInfoRC a {
+  color: white;
+}
+/*------------- FOOTER  -----------------*/
+.footer {
+  grid-area: footer;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  justify-content: flex-end;
+  background: rgb(41, 115, 212);
+  background: linear-gradient(
+    264deg,
+    rgba(41, 115, 212, 1) 8%,
+    rgba(3, 1, 36, 0.8799894957983193) 30%,
+    rgba(14, 29, 50, 1) 80%
+  );
+}
+
+.footer a i {
+  color: #fff;
+  padding: 10px;
+  font-size: 30px;
+  border: #fff 1px solid;
+  border-radius: 100%;
+}
+/*-------------------------------------------------*/
+/*--------------- PROPIEDADES -----------------*/
+/*-------------------------------------------------*/
+
+/* --------- GRILLA PROPIEDAD*/
+.grillaPropiedad {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas:
+    "nav nav "
+    "titulo titulo  "
+    "seccionPropiedades  seccionPropiedades "
+    "footer footer ";
+  grid-template-rows: 2 auto;
+  width: 100%;
+  height: 100%;
+}
+.seccionPropiedades {
+  grid-area: seccionPropiedades;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.propiedad {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border: 1px solid #bbb;
+  box-shadow: 0 5px 10px #0e1d32;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.fotoPropiedad {
+  width: 100%;
+}
+.propiedad p {
+  margin: 1rem;
+}
+.precio {
+  font-weight: bold;
+  text-align: end;
+}
+.ambientes {
+  font-weight: bold;
+}
+
+/*-------------------------------------------------*/
+/*------------------- SERVICIOS -----------------*/
+/*-------------------------------------------------*/
+
+/* ------------- GRILLA SERVICIOS -----------------*/
+.grillaServicios {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "nav nav "
+    "titulo titulo  "
+    "seccionServicios  seccionServicios "
+    "footer footer ";
+  width: 100%;
+}
+.seccionServicios {
+  grid-area: seccionServicios;
+}
+.listaServicios {
+  background-image: url("../img/blog-post-tasacion.jpg");
+  background-size: cover;
+  line-height: 48px;
+}
+.listaServicios ul {
+  height: 62vh;
+}
+.listaServicios ul li {
+  color: white;
+  padding: 5px;
+  margin-left: 2rem;
+  list-style-type: disc;
+}
+
+.galeriaServicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.2rem;
+}
+.galeriaServicios img {
+  height: 110px;
+  transition: all 0.3s;
+  border: #0e1d32;
+  border-style: solid;
+}
+.galeriaServicios img:hover {
+  transform: scale(1.2);
+}
+
+/*-------------------------------------------------*/
+/*--------------- TESTIMONIOS -----------------*/
+/*-------------------------------------------------*/
+
+/* --------- GRILLA TESTIMONIO*/
+.grillaTestimonio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "nav nav "
+    "titulo titulo  "
+    "seccionTestimonios  seccionTestimonios "
+    "footer footer ";
+  grid-template-rows: 2 auto;
+  width: 100%;
+  height: 100%;
+}
+.seccionTestimonios {
+  grid-area: seccionTestimonios;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.testimonio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: #bbb;
+  border: 1px solid #bbb;
+  box-shadow: 0 0.3rem 0.5rem #0e1d32;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.fotoTestimonio {
+  width: 100px;
+  height: 90px;
+  border-radius: 50%;
+}
+/*-------------------------------------------------*/
+/*--------------- CONTACTO  -----------------*/
+/*-------------------------------------------------*/
+
+/* ------- GRILA CONTACTO--------------*/
+.grillaContacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "nav nav "
+    "titulo titulo  "
+    "seccionContacto  seccionContacto "
+    "footer footer ";
+  grid-template-rows: 2 auto;
+  width: 100%;
+  height: 100%;
+}
+.seccionContacto {
+  grid-area: seccionContacto;
+}
+.seccionContacto form {
+  /* margin: 1rem; */
+  padding: 1rem;
+  background-image: url("../img/Contacto.jpg");
+  background-size: cover;
+  /* line-height: 38px; */
+}
+.seccionContacto input {
+  margin: 2px;
+}
+.inputTexto {
+  opacity: 0.3;
+}
+.seccionContacto textArea {
+  margin: 2px;
+  opacity: 0.3;
+}
+.boton {
+  padding: 0.5rem;
+  width: 10rem;
+  background-color: #2973d4;
+}
+
+@media (max-width: 768px) {
+  /* Propiedades*/
+  .seccionPropiedades {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 425px) {
+  .nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedorPresentacion {
+    flex-direction: column;
+  }
+  .contenedorPresentacionParrafos {
+    flex-direction: column;
+    padding: 0;
+  }
+  .contenedorInfoRC {
+    flex-direction: column;
+  }
+  /* Servicios */
+  .galeriaServicios {
+    flex-direction: column;
+    align-items: center;
+  }
+  .galeriaServicios img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+  /* Propiedades*/
+  .seccionPropiedades {
+    grid-template-columns: 1fr;
+  }
+  /* Testimonios */
+  .seccionTestimonios {
+    grid-template-columns: 1fr;
+  }
+  /* Contacto */
+  .inputTexto {
+    width: auto;
+  }
+  .boton {
+    padding: 0.5rem;
+    background-color: #2973d4;
+    width: auto;
+  }
+}
