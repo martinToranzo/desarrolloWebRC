@@ -309,27 +309,31 @@
 .seccionContacto {
   grid-area: seccionContacto;
 }
+
 .seccionContacto form {
-  /* margin: 1rem; */
   padding: 1rem;
   background-image: url("../img/Contacto.jpg");
   background-size: cover;
-  /* line-height: 38px; */
+  padding: 0.5rem;
 }
 .seccionContacto input {
   margin: 2px;
 }
+
 .inputTexto {
+  margin: 1rem;
   opacity: 0.3;
 }
 .seccionContacto textArea {
   margin: 2px;
   opacity: 0.3;
+  resize: none;
 }
 .boton {
-  padding: 0.5rem;
+  padding: 0.4rem;
   width: 10rem;
   background-color: #2973d4;
+  border-radius: 2%;
 }
 
 @media (max-width: 768px) {
@@ -376,12 +380,11 @@
     grid-template-columns: 1fr;
   }
   /* Contacto */
-  .inputTexto {
-    width: auto;
+  .formContacto {
+    background-color: transparent;
   }
   .boton {
     padding: 0.5rem;
     background-color: #2973d4;
-    width: auto;
   }
 }
