@@ -227,9 +227,6 @@
   background-size: cover;
   line-height: 48px;
 }
-.listaServicios ul {
-  height: 62vh;
-}
 .listaServicios ul li {
   color: white;
   padding: 5px;
