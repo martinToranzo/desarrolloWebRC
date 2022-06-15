@@ -318,12 +318,17 @@
   padding: 0.5rem;
 }
 .seccionContacto input {
-  margin: 2px;
+  margin: 0.5rem;
 }
 
 .inputTexto {
-  margin: 1rem;
   opacity: 0.3;
+}
+.inputTexto:focus {
+  background-color: #0e1d32;
+  color: white;
+  transform: scale(1.05);
+  transition: all 1s;
 }
 .seccionContacto textArea {
   margin: 2px;
