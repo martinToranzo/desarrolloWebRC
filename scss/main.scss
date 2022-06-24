@@ -1,0 +1,26 @@
+$color_gris: #bbb;
+
+@font-face {
+  font-family: "avenir";
+  src: url("../font/AvenirLTStd-Book.otf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "avenir";
+}
+h1 {
+  margin: 1rem;
+  font-size: 2rem;
+}
+h2 {
+  margin: 1rem;
+}
+@import "./secciones/header";
+@import "./secciones/footer";
+@import "./secciones/index";
+@import "./secciones/propiedades";
+@import "./secciones/servicios";
+@import "./secciones/testimonios";
+@import "./secciones/contacto";

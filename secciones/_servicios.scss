@@ -1,0 +1,58 @@
+/*-------------------------------------------------*/
+/*------------------- SERVICIOS -----------------*/
+/*-------------------------------------------------*/
+
+/* ------------- GRILLA SERVICIOS -----------------*/
+.grillaServicios {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "nav nav "
+    "titulo titulo  "
+    "seccionServicios  seccionServicios "
+    "footer footer ";
+  width: 100%;
+
+  .seccionServicios {
+    grid-area: seccionServicios;
+    background-image: url("../img/blog-post-tasacion.jpg");
+    background-size: cover;
+
+    .listaServicios {
+      line-height: 48px;
+      ul li {
+        color: white;
+        padding: 5px;
+        margin-left: 2rem;
+        list-style-type: disc;
+      }
+    }
+    .galeriaServicios {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0.05rem;
+      img {
+        width: 15%;
+        transition: all 0.3s;
+        border: #0e1d32;
+        border-style: solid;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  /* Servicios */
+  .grillaServicios .seccionServicios .galeriaServicios {
+    flex-direction: column;
+    align-items: center;
+  }
+  .grillaServicios .seccionServicios .galeriaServicios img {
+    width: 70%;
+    margin-top: 1rem;
+  }
+}

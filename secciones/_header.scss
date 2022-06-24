@@ -1,0 +1,84 @@
+/* ----------------------- HEADER ---------------------*/
+.logo {
+  max-width: 120px;
+  animation-name: amplioLogo;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: rgb(41, 115, 212);
+  background: linear-gradient(
+    264deg,
+    rgba(41, 115, 212, 1) 8%,
+    rgba(3, 1, 36, 0.8799894957983193) 30%,
+    rgba(14, 29, 50, 1) 80%
+  );
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  li a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    &:hover {
+      color: #2973d4;
+    }
+  }
+}
+
+@keyframes amplioLogo {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.95);
+  }
+  20% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(0.85);
+  }
+  40% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(0.85);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  90% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 425px) {
+  .nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}

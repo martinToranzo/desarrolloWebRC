@@ -1,0 +1,62 @@
+/*-------------------------------------------------*/
+/*--------------- PROPIEDADES -----------------*/
+/*-------------------------------------------------*/
+
+/* --------- GRILLA PROPIEDAD*/
+.grillaPropiedad {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas:
+    "nav nav "
+    "titulo titulo  "
+    "seccionPropiedades  seccionPropiedades "
+    "footer footer ";
+  grid-template-rows: 2 auto;
+  width: 100%;
+  height: 100%;
+
+  .seccionPropiedades {
+    grid-area: seccionPropiedades;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .propiedad {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      border: 1px solid $color_gris;
+      box-shadow: 0 5px 10px #0e1d32;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      .fotoPropiedad {
+        width: 100%;
+      }
+      p {
+        margin: 1rem;
+      }
+      .precio {
+        font-weight: bold;
+        text-align: end;
+      }
+      .ambientes {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /* Propiedades*/
+  .seccionPropiedades {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .grillaPropiedad .seccionPropiedades {
+    grid-template-columns: 1fr;
+  }
+}

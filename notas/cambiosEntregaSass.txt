@@ -1,0 +1,13 @@
+1) Reorganizacion:
+        _ html de cada seccion se coloco en /secciones (contacto, propiedades, servicios y testimonios)
+        _ se modificaron enlaces y rutas a las imagenes de los html que se movieron a secciones.
+
+2) Se aplico sass al proyecto global.
+
+3) Se creo diectorio "notas" con notas del proyecto de utilidad.
+
+4) Se modifico etiqueta "title" para que indique nombre + seccion.
+
+5) Se agrega seo.
+    keywords
+    description

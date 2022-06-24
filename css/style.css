@@ -1,137 +1,82 @@
 @font-face {
   font-family: "avenir";
-  src: url("../font/AvenirLTStd-Book.otf");
-}
+  src: url("../font/AvenirLTStd-Book.otf"); }
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "avenir";
-}
+  font-family: "avenir"; }
 
-/*--------------- ----------------------------------*/
-/*--------------- ---- HOME  ---------------------*/
-/*--------------- ----------------------------------*/
+h1 {
+  margin: 1rem;
+  font-size: 2rem; }
 
-/*----------- GRILLA ---------------------*/
-.grilla {
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
-  grid-template-areas:
-    "nav nav nav "
-    "seccionPortada seccionPortada  seccionPortada"
-    /* "seccionPrincipal  seccionPrincipal seccionPrincipal" */
-    "footer footer footer ";
-  width: 100%;
-  height: 100%;
-}
-/* ----------------------- NAV ---------------------*/
+h2 {
+  margin: 1rem; }
+
+/* ----------------------- HEADER ---------------------*/
 .logo {
   max-width: 120px;
   animation-name: amplioLogo;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
+
 .nav {
   grid-area: nav;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: rgb(41, 115, 212);
-  background: linear-gradient(
-    264deg,
-    rgba(41, 115, 212, 1) 8%,
-    rgba(3, 1, 36, 0.8799894957983193) 30%,
-    rgba(14, 29, 50, 1) 80%
-  );
-}
+  background: #2973d4;
+  background: linear-gradient(264deg, #2973d4 8%, rgba(3, 1, 36, 0.879989) 30%, #0e1d32 80%); }
+
 .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  align-items: center;
-}
-.menu li a {
-  color: white;
-  text-decoration: none;
-  margin: 20px;
-}
-.menu li a:hover {
-  color: #2973d4;
-}
-/*------------- SECCION PORTADA -----------------*/
-.seccionPortada {
-  grid-area: seccionPortada;
-  background-image: url("https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
-  background-size: cover;
-}
-.fotoPortada {
-  width: 100%;
-  /* height: 300px; */
-}
-.fotoPortada img {
-  width: 100%;
-  height: 100%;
-}
-/* ----------- TITULO ------------------------------*/
-.titulo {
-  grid-area: titulo;
-  margin: 1rem;
-}
-.seccionPortada h1 {
-  margin: 1rem;
-  font-size: 2rem;
-}
-.seccionPortada h2 {
-  margin: 1rem;
-}
-/* --------- SECCION PRINCIPAL ------------------*/
-/* .seccionPrincipal {
-  grid-area: seccionPrincipal;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
-.contenedorPresentacion {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.contenedorPresentacionParrafos {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 70%;
-  height: 100%;
-  margin: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background-color: rgb(212 240 252);
-  opacity: 0.7;
-}
+  align-items: center; }
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    margin: 20px; }
+    .menu li a:hover {
+      color: #2973d4; }
 
-.contenedorInfoRC {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 30%;
-  padding: 1rem;
-  margin: 0.5rem;
-}
-.contenedorInfoRC img {
-  width: 50%;
-  min-width: 230px;
-  border: 1px solid #bbb;
-  box-shadow: 0 5px 10px #0e1d32;
-}
+@keyframes amplioLogo {
+  0% {
+    transform: scale(1); }
+  10% {
+    transform: scale(0.95); }
+  20% {
+    transform: scale(0.9); }
+  30% {
+    transform: scale(0.85); }
+  40% {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(0.75); }
+  60% {
+    transform: scale(0.8); }
+  70% {
+    transform: scale(0.85); }
+  80% {
+    transform: scale(0.9); }
+  90% {
+    transform: scale(0.95); }
+  100% {
+    transform: scale(1); } }
 
-.contenedorInfoRC a {
-  color: white;
-}
+@media (max-width: 425px) {
+  .nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column; }
+  .menu {
+    flex-direction: column;
+    align-items: center; } }
+
 /*------------- FOOTER  -----------------*/
 .footer {
   grid-area: footer;
@@ -140,297 +85,244 @@
   align-items: center;
   padding-right: 1rem;
   justify-content: flex-end;
-  background: rgb(41, 115, 212);
-  background: linear-gradient(
-    264deg,
-    rgba(41, 115, 212, 1) 8%,
-    rgba(3, 1, 36, 0.8799894957983193) 30%,
-    rgba(14, 29, 50, 1) 80%
-  );
-}
+  background: #2973d4;
+  background: linear-gradient(264deg, #2973d4 8%, rgba(3, 1, 36, 0.879989) 30%, #0e1d32 80%); }
+  .footer a i {
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    border: #fff 1px solid;
+    border-radius: 100%; }
 
-.footer a i {
-  color: #fff;
-  padding: 10px;
-  font-size: 30px;
-  border: #fff 1px solid;
-  border-radius: 100%;
-}
+/*---------------------------------------*/
+/*----------- INDEX --------------------*/
+/*---------------------------------------*/
+.grilla {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-areas: "nav nav nav " "seccionPortada seccionPortada  seccionPortada" "footer footer footer ";
+  width: 100%;
+  height: 100%; }
+
+/*------------- SECCION PORTADA -----------------*/
+.seccionPortada {
+  grid-area: seccionPortada;
+  background-image: url("https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
+  background-size: cover; }
+  .seccionPortada h1 {
+    margin: 1rem;
+    font-size: 2rem; }
+  .seccionPortada h2 {
+    margin: 1rem; }
+  .seccionPortada .fotoPortada {
+    width: 100%; }
+    .seccionPortada .fotoPortada img {
+      width: 100%;
+      height: 100%; }
+  .seccionPortada .contenedorPresentacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+  .seccionPortada .contenedorPresentacionParrafos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 100%;
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #d4f0fc;
+    opacity: 0.7; }
+  .seccionPortada .contenedorInfoRC {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    padding: 1rem;
+    margin: 0.5rem; }
+    .seccionPortada .contenedorInfoRC img {
+      width: 50%;
+      min-width: 230px;
+      border: 1px solid #bbb;
+      box-shadow: 0 5px 10px #0e1d32; }
+  .seccionPortada a {
+    color: white; }
+
+@media (max-width: 425px) {
+  .contenedorPresentacion {
+    flex-direction: column; }
+  .contenedorPresentacionParrafos {
+    flex-direction: column;
+    padding: 0; }
+  .contenedorInfoRC {
+    flex-direction: column; } }
+
 /*-------------------------------------------------*/
 /*--------------- PROPIEDADES -----------------*/
 /*-------------------------------------------------*/
-
 /* --------- GRILLA PROPIEDAD*/
 .grillaPropiedad {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-template-areas:
-    "nav nav "
-    "titulo titulo  "
-    "seccionPropiedades  seccionPropiedades "
-    "footer footer ";
+  grid-template-areas: "nav nav " "titulo titulo  " "seccionPropiedades  seccionPropiedades " "footer footer ";
   grid-template-rows: 2 auto;
   width: 100%;
-  height: 100%;
-}
-.seccionPropiedades {
-  grid-area: seccionPropiedades;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.propiedad {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  border: 1px solid #bbb;
-  box-shadow: 0 5px 10px #0e1d32;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-}
-.fotoPropiedad {
-  width: 100%;
-}
-.propiedad p {
-  margin: 1rem;
-}
-.precio {
-  font-weight: bold;
-  text-align: end;
-}
-.ambientes {
-  font-weight: bold;
-}
+  height: 100%; }
+  .grillaPropiedad .seccionPropiedades {
+    grid-area: seccionPropiedades;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .grillaPropiedad .seccionPropiedades .propiedad {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      border: 1px solid #bbb;
+      box-shadow: 0 5px 10px #0e1d32;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem; }
+      .grillaPropiedad .seccionPropiedades .propiedad .fotoPropiedad {
+        width: 100%; }
+      .grillaPropiedad .seccionPropiedades .propiedad p {
+        margin: 1rem; }
+      .grillaPropiedad .seccionPropiedades .propiedad .precio {
+        font-weight: bold;
+        text-align: end; }
+      .grillaPropiedad .seccionPropiedades .propiedad .ambientes {
+        font-weight: bold; }
+
+@media (max-width: 768px) {
+  /* Propiedades*/
+  .seccionPropiedades {
+    grid-template-columns: 1fr 1fr; } }
+
+@media (max-width: 425px) {
+  .grillaPropiedad .seccionPropiedades {
+    grid-template-columns: 1fr; } }
 
 /*-------------------------------------------------*/
 /*------------------- SERVICIOS -----------------*/
 /*-------------------------------------------------*/
-
 /* ------------- GRILLA SERVICIOS -----------------*/
 .grillaServicios {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-areas:
-    "nav nav "
-    "titulo titulo  "
-    "seccionServicios  seccionServicios "
-    "footer footer ";
-  width: 100%;
-}
-.seccionServicios {
-  grid-area: seccionServicios;
-  background-image: url("../img/blog-post-tasacion.jpg");
-  background-size: cover;
-}
-.listaServicios {
-  /* background-image: url("../img/blog-post-tasacion.jpg");
-  background-size: cover; */
-  line-height: 48px;
-}
-.listaServicios ul li {
-  color: white;
-  padding: 5px;
-  margin-left: 2rem;
-  list-style-type: disc;
-}
+  grid-template-areas: "nav nav " "titulo titulo  " "seccionServicios  seccionServicios " "footer footer ";
+  width: 100%; }
+  .grillaServicios .seccionServicios {
+    grid-area: seccionServicios;
+    background-image: url("../img/blog-post-tasacion.jpg");
+    background-size: cover; }
+    .grillaServicios .seccionServicios .listaServicios {
+      line-height: 48px; }
+      .grillaServicios .seccionServicios .listaServicios ul li {
+        color: white;
+        padding: 5px;
+        margin-left: 2rem;
+        list-style-type: disc; }
+    .grillaServicios .seccionServicios .galeriaServicios {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0.05rem; }
+      .grillaServicios .seccionServicios .galeriaServicios img {
+        width: 15%;
+        transition: all 0.3s;
+        border: #0e1d32;
+        border-style: solid; }
+        .grillaServicios .seccionServicios .galeriaServicios img:hover {
+          transform: scale(1.2); }
 
-.galeriaServicios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0.05rem;
-}
-.galeriaServicios img {
-  width: 15%;
-  transition: all 0.3s;
-  border: #0e1d32;
-  border-style: solid;
-  /* opacity: 0.5; */
-}
-.galeriaServicios img:hover {
-  transform: scale(1.2);
-}
+@media (max-width: 425px) {
+  /* Servicios */
+  .grillaServicios .seccionServicios .galeriaServicios {
+    flex-direction: column;
+    align-items: center; }
+  .grillaServicios .seccionServicios .galeriaServicios img {
+    width: 70%;
+    margin-top: 1rem; } }
 
 /*-------------------------------------------------*/
 /*--------------- TESTIMONIOS -----------------*/
 /*-------------------------------------------------*/
-
 /* --------- GRILLA TESTIMONIO*/
 .grillaTestimonio {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "nav nav "
-    "titulo titulo  "
-    "seccionTestimonios  seccionTestimonios "
-    "footer footer ";
+  grid-template-areas: "nav nav " "titulo titulo  " "seccionTestimonios  seccionTestimonios " "footer footer ";
   grid-template-rows: 2 auto;
   width: 100%;
-  height: 100%;
-}
-.seccionTestimonios {
-  grid-area: seccionTestimonios;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.testimonio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  background-color: #bbb;
-  border: 1px solid #bbb;
-  box-shadow: 0 0.3rem 0.5rem #0e1d32;
-  margin: auto;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-}
-.fotoTestimonio {
-  width: 100px;
-  height: 90px;
-  border-radius: 50%;
-}
+  height: 100%; }
+  .grillaTestimonio .seccionTestimonios {
+    grid-area: seccionTestimonios;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .grillaTestimonio .seccionTestimonios .testimonio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      background-color: #bbb;
+      border: 1px solid #bbb;
+      box-shadow: 0 0.3rem 0.5rem #0e1d32;
+      margin: auto;
+      margin-bottom: 1rem;
+      padding: 0.5rem; }
+      .grillaTestimonio .seccionTestimonios .testimonio .fotoTestimonio {
+        width: 100px;
+        height: 90px;
+        border-radius: 50%; }
+
+@media (max-width: 425px) {
+  .grillaTestimonio .seccionTestimonios {
+    grid-template-columns: 1fr; } }
+
 /*-------------------------------------------------*/
 /*--------------- CONTACTO  -----------------*/
 /*-------------------------------------------------*/
-
 /* ------- GRILA CONTACTO--------------*/
 .grillaContacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "nav nav "
-    "titulo titulo  "
-    "seccionContacto  seccionContacto "
-    "footer footer ";
+  grid-template-areas: "nav nav " "titulo titulo  " "seccionContacto  seccionContacto " "footer footer ";
   grid-template-rows: 2 auto;
   width: 100%;
-  height: 100%;
-}
-.seccionContacto {
-  grid-area: seccionContacto;
-}
+  height: 100%; }
+  .grillaContacto .seccionContacto {
+    grid-area: seccionContacto; }
+    .grillaContacto .seccionContacto form {
+      padding: 1rem;
+      background-image: url("../img/Contacto.jpg");
+      background-size: cover;
+      padding: 0.5rem; }
+    .grillaContacto .seccionContacto input {
+      margin: 0.5rem; }
+    .grillaContacto .seccionContacto .inputTexto {
+      opacity: 0.3; }
+      .grillaContacto .seccionContacto .inputTexto:focus {
+        background-color: #0e1d32;
+        color: white;
+        transform: scale(1.05);
+        transition: all 1s; }
+    .grillaContacto .seccionContacto textArea {
+      margin: 2px;
+      opacity: 0.3;
+      resize: none; }
+    .grillaContacto .seccionContacto .boton {
+      padding: 0.4rem;
+      width: 10rem;
+      background-color: #2973d4;
+      border-radius: 2%; }
 
-.seccionContacto form {
-  padding: 1rem;
-  background-image: url("../img/Contacto.jpg");
-  background-size: cover;
-  padding: 0.5rem;
-}
-.seccionContacto input {
-  margin: 0.5rem;
-}
-
-.inputTexto {
-  opacity: 0.3;
-}
-.inputTexto:focus {
-  background-color: #0e1d32;
-  color: white;
-  transform: scale(1.05);
-  transition: all 1s;
-}
-.seccionContacto textArea {
-  margin: 2px;
-  opacity: 0.3;
-  resize: none;
-}
-.boton {
-  padding: 0.4rem;
-  width: 10rem;
-  background-color: #2973d4;
-  border-radius: 2%;
-}
-
-@keyframes amplioLogo {
-  0% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(0.95);
-  }
-  20% {
-    transform: scale(0.9);
-  }
-  30% {
-    transform: scale(0.85);
-  }
-  40% {
-    transform: scale(0.8);
-  }
-  50% {
-    transform: scale(0.75);
-  }
-  60% {
-    transform: scale(0.8);
-  }
-  70% {
-    transform: scale(0.85);
-  }
-  80% {
-    transform: scale(0.9);
-  }
-  90% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* ----------------- MEDIA -----------------------*/
-@media (max-width: 768px) {
-  /* Propiedades*/
-  .seccionPropiedades {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 @media (max-width: 425px) {
-  .nav {
-    grid-area: nav;
-    display: flex;
-    flex-direction: column;
-  }
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contenedorPresentacion {
-    flex-direction: column;
-  }
-  .contenedorPresentacionParrafos {
-    flex-direction: column;
-    padding: 0;
-  }
-  .contenedorInfoRC {
-    flex-direction: column;
-  }
-  /* Servicios */
-  .galeriaServicios {
-    flex-direction: column;
-    align-items: center;
-  }
-  .galeriaServicios img {
-    width: 70%;
-    margin-top: 1rem;
-  }
-  /* Propiedades*/
-  .seccionPropiedades {
-    grid-template-columns: 1fr;
-  }
-  /* Testimonios */
-  .seccionTestimonios {
-    grid-template-columns: 1fr;
-  }
-  /* Contacto */
   .formContacto {
-    background-color: transparent;
-  }
+    background-color: transparent; }
   .boton {
     padding: 0.5rem;
-    background-color: #2973d4;
-  }
-}
+    background-color: #2973d4; } }

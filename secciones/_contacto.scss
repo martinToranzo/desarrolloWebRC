@@ -1,0 +1,61 @@
+/*-------------------------------------------------*/
+/*--------------- CONTACTO  -----------------*/
+/*-------------------------------------------------*/
+
+/* ------- GRILA CONTACTO--------------*/
+.grillaContacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "nav nav "
+    "titulo titulo  "
+    "seccionContacto  seccionContacto "
+    "footer footer ";
+  grid-template-rows: 2 auto;
+  width: 100%;
+  height: 100%;
+
+  .seccionContacto {
+    grid-area: seccionContacto;
+    form {
+      padding: 1rem;
+      background-image: url("../img/Contacto.jpg");
+      background-size: cover;
+      padding: 0.5rem;
+    }
+    input {
+      margin: 0.5rem;
+    }
+    .inputTexto {
+      opacity: 0.3;
+      &:focus {
+        background-color: #0e1d32;
+        color: white;
+        transform: scale(1.05);
+        transition: all 1s;
+      }
+    }
+
+    textArea {
+      margin: 2px;
+      opacity: 0.3;
+      resize: none;
+    }
+    .boton {
+      padding: 0.4rem;
+      width: 10rem;
+      background-color: #2973d4;
+      border-radius: 2%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .formContacto {
+    background-color: transparent;
+  }
+  .boton {
+    padding: 0.5rem;
+    background-color: #2973d4;
+  }
+}

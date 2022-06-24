@@ -1,0 +1,23 @@
+/*------------- FOOTER  -----------------*/
+.footer {
+  grid-area: footer;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  justify-content: flex-end;
+  background: rgb(41, 115, 212);
+  background: linear-gradient(
+    264deg,
+    rgba(41, 115, 212, 1) 8%,
+    rgba(3, 1, 36, 0.8799894957983193) 30%,
+    rgba(14, 29, 50, 1) 80%
+  );
+  a i {
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    border: #fff 1px solid;
+    border-radius: 100%;
+  }
+}
