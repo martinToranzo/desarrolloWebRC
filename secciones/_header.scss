@@ -11,7 +11,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: rgb(41, 115, 212);
+  background: $color_azul_claro;
   background: linear-gradient(
     264deg,
     rgba(41, 115, 212, 1) 8%,
@@ -30,7 +30,7 @@
     text-decoration: none;
     margin: 20px;
     &:hover {
-      color: #2973d4;
+      color: $color_azul_claro;
     }
   }
 }

@@ -3,6 +3,9 @@
         _ se modificaron enlaces y rutas a las imagenes de los html que se movieron a secciones.
 
 2) Se aplico sass al proyecto global.
+        Se crearon variables para colores.
+        Se creo extend %opacityInput para estandarizar la opacidad de los input.
+        Se creo @mixin estiloBoton para aplicar formato estandar a botones y parametro para darle el color.
 
 3) Se creo diectorio "notas" con notas del proyecto de utilidad.
 

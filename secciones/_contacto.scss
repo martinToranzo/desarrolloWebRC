@@ -27,9 +27,9 @@
       margin: 0.5rem;
     }
     .inputTexto {
-      opacity: 0.3;
+      @extend %opacityInput;
       &:focus {
-        background-color: #0e1d32;
+        background-color: $color_azul_oscuro;
         color: white;
         transform: scale(1.05);
         transition: all 1s;
@@ -38,14 +38,11 @@
 
     textArea {
       margin: 2px;
-      opacity: 0.3;
+      @extend %opacityInput;
       resize: none;
     }
     .boton {
-      padding: 0.4rem;
-      width: 10rem;
-      background-color: #2973d4;
-      border-radius: 2%;
+      @include estiloBoton($color_azul_claro);
     }
   }
 }
@@ -56,6 +53,6 @@
   }
   .boton {
     padding: 0.5rem;
-    background-color: #2973d4;
+    background-color: $color_azul_claro;
   }
 }

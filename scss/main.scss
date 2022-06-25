@@ -1,5 +1,3 @@
-$color_gris: #bbb;
-
 @font-face {
   font-family: "avenir";
   src: url("../font/AvenirLTStd-Book.otf");
@@ -17,6 +15,10 @@ h1 {
 h2 {
   margin: 1rem;
 }
+
+@import "./variables/colores";
+@import "./variables/extend";
+@import "./variables/mixins";
 @import "./secciones/header";
 @import "./secciones/footer";
 @import "./secciones/index";

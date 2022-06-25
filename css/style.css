@@ -15,6 +15,9 @@ h1 {
 h2 {
   margin: 1rem; }
 
+.grillaContacto .seccionContacto .inputTexto, .grillaContacto .seccionContacto textArea {
+  opacity: 0.3; }
+
 /* ----------------------- HEADER ---------------------*/
 .logo {
   max-width: 120px;
@@ -303,16 +306,13 @@ h2 {
       padding: 0.5rem; }
     .grillaContacto .seccionContacto input {
       margin: 0.5rem; }
-    .grillaContacto .seccionContacto .inputTexto {
-      opacity: 0.3; }
-      .grillaContacto .seccionContacto .inputTexto:focus {
-        background-color: #0e1d32;
-        color: white;
-        transform: scale(1.05);
-        transition: all 1s; }
+    .grillaContacto .seccionContacto .inputTexto:focus {
+      background-color: #0e1d32;
+      color: white;
+      transform: scale(1.05);
+      transition: all 1s; }
     .grillaContacto .seccionContacto textArea {
       margin: 2px;
-      opacity: 0.3;
       resize: none; }
     .grillaContacto .seccionContacto .boton {
       padding: 0.4rem;

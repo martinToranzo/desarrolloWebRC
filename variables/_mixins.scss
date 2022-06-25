@@ -1,0 +1,6 @@
+@mixin estiloBoton($colorBoton) {
+  padding: 0.4rem;
+  width: 10rem;
+  background-color: $colorBoton;
+  border-radius: 2%;
+}
