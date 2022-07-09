@@ -11,48 +11,69 @@
     "titulo titulo  "
     "seccionContacto  seccionContacto "
     "footer footer ";
-  grid-template-rows: 2 auto;
   width: 100%;
   height: 100%;
 
   .seccionContacto {
     grid-area: seccionContacto;
-    form {
-      padding: 1rem;
-      background-image: url("../img/Contacto.jpg");
-      background-size: cover;
-      padding: 0.5rem;
-    }
-    input {
-      margin: 0.5rem;
-    }
-    .inputTexto {
-      @extend %opacityInput;
-      &:focus {
-        background-color: $color_azul_oscuro;
-        color: white;
-        transform: scale(1.05);
-        transition: all 1s;
+    background-image: url("../img/Contacto.jpg");
+    background-size: cover;
+    padding-left: 2rem;
+    .camposContacto {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      width: 50%;
+      .inputTexto {
+        @extend %opacityInput;
+        margin-bottom: 0.4rem;
+        &:focus {
+          background-color: $color_azul_oscuro;
+          color: white;
+          transform: scale(1.05);
+          transition: all 1s;
+          //width: 100%;
+        }
+      }
+      textArea {
+        margin: 2px;
+        @extend %opacityInput;
+        resize: none;
       }
     }
-
-    textArea {
-      margin: 2px;
-      @extend %opacityInput;
-      resize: none;
-    }
-    .boton {
-      @include estiloBoton($color_azul_claro);
+    .botonesContacto {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      .boton {
+        @include estiloBoton($color_azul_claro);
+      }
     }
   }
 }
 
 @media (max-width: 425px) {
-  .formContacto {
-    background-color: transparent;
-  }
-  .boton {
-    padding: 0.5rem;
-    background-color: $color_azul_claro;
+  .grillaContacto {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav  "
+      "titulo   "
+      "seccionContacto   "
+      "footer  ";
+
+    .seccionContacto {
+      .camposContacto {
+        width: 90%;
+      }
+      .botonesContacto {
+        width: 90%;
+      }
+    }
+    .boton {
+      padding: 0.5rem;
+      background-color: $color_azul_claro;
+    }
   }
 }

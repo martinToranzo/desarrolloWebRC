@@ -15,7 +15,7 @@ h1 {
 h2 {
   margin: 1rem; }
 
-.grillaContacto .seccionContacto .inputTexto, .grillaContacto .seccionContacto textArea {
+.grillaContacto .seccionContacto .camposContacto .inputTexto, .grillaContacto .seccionContacto .camposContacto textArea {
   opacity: 0.3; }
 
 /* ----------------------- HEADER ---------------------*/
@@ -258,7 +258,6 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "nav nav " "titulo titulo  " "seccionTestimonios  seccionTestimonios " "footer footer ";
-  grid-template-rows: 2 auto;
   width: 100%;
   height: 100%; }
   .grillaTestimonio .seccionTestimonios {
@@ -294,35 +293,49 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "nav nav " "titulo titulo  " "seccionContacto  seccionContacto " "footer footer ";
-  grid-template-rows: 2 auto;
   width: 100%;
   height: 100%; }
   .grillaContacto .seccionContacto {
-    grid-area: seccionContacto; }
-    .grillaContacto .seccionContacto form {
-      padding: 1rem;
-      background-image: url("../img/Contacto.jpg");
-      background-size: cover;
-      padding: 0.5rem; }
-    .grillaContacto .seccionContacto input {
-      margin: 0.5rem; }
-    .grillaContacto .seccionContacto .inputTexto:focus {
-      background-color: #0e1d32;
-      color: white;
-      transform: scale(1.05);
-      transition: all 1s; }
-    .grillaContacto .seccionContacto textArea {
-      margin: 2px;
-      resize: none; }
-    .grillaContacto .seccionContacto .boton {
-      padding: 0.4rem;
-      width: 10rem;
-      background-color: #2973d4;
-      border-radius: 2%; }
+    grid-area: seccionContacto;
+    background-image: url("../img/Contacto.jpg");
+    background-size: cover;
+    padding-left: 2rem; }
+    .grillaContacto .seccionContacto .camposContacto {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      width: 50%; }
+      .grillaContacto .seccionContacto .camposContacto .inputTexto {
+        margin-bottom: 0.4rem; }
+        .grillaContacto .seccionContacto .camposContacto .inputTexto:focus {
+          background-color: #0e1d32;
+          color: white;
+          transform: scale(1.05);
+          transition: all 1s; }
+      .grillaContacto .seccionContacto .camposContacto textArea {
+        margin: 2px;
+        resize: none; }
+    .grillaContacto .seccionContacto .botonesContacto {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+      .grillaContacto .seccionContacto .botonesContacto .boton {
+        margin: 0.4rem;
+        padding: 0.4rem;
+        width: 10rem;
+        background-color: #2973d4;
+        border-radius: 2%; }
 
 @media (max-width: 425px) {
-  .formContacto {
-    background-color: transparent; }
-  .boton {
-    padding: 0.5rem;
-    background-color: #2973d4; } }
+  .grillaContacto {
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav  " "titulo   " "seccionContacto   " "footer  "; }
+    .grillaContacto .seccionContacto .camposContacto {
+      width: 90%; }
+    .grillaContacto .seccionContacto .botonesContacto {
+      width: 90%; }
+    .grillaContacto .boton {
+      padding: 0.5rem;
+      background-color: #2973d4; } }
